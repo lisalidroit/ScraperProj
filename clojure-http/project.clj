@@ -8,5 +8,5 @@
                  [http-kit "2.2.0"]
                  [clj-time "0.14.0"]
                  [compojure "1.6.0"]
-                 [hiccup "1.0.5"]]
+                 [selmer "1.12.17"]]
   :main clojure-http.core)
