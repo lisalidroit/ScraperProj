@@ -1,0 +1,11 @@
+services:
+  srv:
+    build: .
+    image: h3khaira/clojure-http
+    environment:
+      VIRTUAL_HOST=scrapertest.com
+    volumes:
+      - ./resources/settings:/app/resources/settings
+    ports:
+      - 8080:8080
+    restart: always
