@@ -10,4 +10,5 @@
                  [clj-time "0.14.0"]
                  [compojure "1.6.0"]
                  [selmer "1.12.17"]]
-  :main clojure-http.core)
+  :main clojure-http.core
+  :aot [clojure-http.core])

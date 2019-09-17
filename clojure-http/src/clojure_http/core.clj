@@ -5,7 +5,8 @@
             [compojure.core :refer :all]
             [compojure.route :as route]
             [selmer.parser :refer [render-file render]]
-            [ring.util.response :as resp]))
+            [ring.util.response :as resp])
+    (:gen-class))
 
 (defn get-time
   []
