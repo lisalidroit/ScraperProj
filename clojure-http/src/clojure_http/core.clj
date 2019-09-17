@@ -4,7 +4,8 @@
             [clj-time.core :as t]
             [compojure.core :refer :all]
             [compojure.route :as route]
-            [selmer.parser :refer [render-file render]]))
+            [selmer.parser :refer [render-file render]]
+            [ring.util.response :as resp]))
 
 (defn get-time
   []
@@ -14,7 +15,7 @@
     response))
 
 (defroutes app
-           (GET "/" [] "<h1>Welcome</h1>")
+           (GET "/" [] (resp/resource-response "index.html" {:root "public"}))
            (GET "/get-time" [] (get-time))
            (route/not-found "<h1>Page not found</h1>"))
 
@@ -22,3 +23,4 @@
 (defn -main [& args]
   (run-server app {:port 8080})
   (println "Server started on port 8080"))
+
