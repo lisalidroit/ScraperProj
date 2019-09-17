@@ -16,8 +16,8 @@
 
 (defroutes app
            (GET "/" [] (resp/resource-response "main-page.html" {:root "public"}))
-           (GET "/Pages/" [] (resp/resource-response "page2.html" {:root "public/Pages"}))
            (GET "/get-time" [] (get-time))
+           (route/resources "/")
            (route/not-found "<h1>Page not found</h1>"))
 
 
