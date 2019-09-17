@@ -1,9 +1,10 @@
 # 1
 FROM clojure
 # 2
-LABEL maintainer="Divyum Rastogi"
+LABEL maintainer="Lisa"
 # 3
 COPY . /usr/src/app
+COPY resources/public resources/public
 # 4                                 
 WORKDIR /usr/src/app                                 
 # 5
