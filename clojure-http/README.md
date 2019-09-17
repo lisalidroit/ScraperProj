@@ -1,6 +1,6 @@
 # clojure-http
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to host some static pages that can be used to test the scraper's functionality
 
 ## Usage
 
